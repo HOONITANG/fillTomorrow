@@ -14,3 +14,7 @@ https://github.com/oblador/react-native-vector-icons
 
 ## 6.react-native-async-storage
 
+## 7.code-push
+
+## option.fast-lane
+
