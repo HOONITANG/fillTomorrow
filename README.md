@@ -1,8 +1,10 @@
 # ez-react-native-start
 
 ## 1.Navigation
+https://reactnavigation.org/docs/getting-started
 
 ## 2.VectorIcon
+https://github.com/oblador/react-native-vector-icons
 
 ## 3.Redux
 
