@@ -6,7 +6,7 @@ https://reactnavigation.org/docs/getting-started
 ## 2.VectorIcon
 https://github.com/oblador/react-native-vector-icons
 
-## 3.Redux
+## 3.Redux && Redux Toolkit
 
 ## 4.Notification
 
@@ -20,4 +20,6 @@ https://github.com/oblador/react-native-vector-icons
 https://react-query.tanstack.com/
 
 ## option.fast-lane
+## option.typeScript
+## option.eslint
 
