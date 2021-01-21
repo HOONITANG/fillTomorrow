@@ -16,5 +16,8 @@ https://github.com/oblador/react-native-vector-icons
 
 ## 7.code-push
 
+## 8.react-query
+https://react-query.tanstack.com/
+
 ## option.fast-lane
 
