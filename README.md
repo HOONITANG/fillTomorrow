@@ -7,6 +7,7 @@ https://reactnavigation.org/docs/getting-started
 https://github.com/oblador/react-native-vector-icons
 
 ## 3.Redux && Redux Toolkit
+- Redux Thunk, Redux Sage
 
 ## 4.Notification
 
@@ -23,3 +24,4 @@ https://react-query.tanstack.com/
 ## option.typeScript
 ## option.eslint
 
+## option.design...
