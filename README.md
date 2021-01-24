@@ -4,6 +4,7 @@
 https://reactnavigation.org/docs/getting-started
 
 Screen 모든 곳에 접근 할 수 있게 StackNavigation 한 군데에서 모두 선언
+SplashScreen, Auth 관련 로직 추가 예정
 
 
 ## 2.VectorIcon 완료
