@@ -28,6 +28,7 @@ https://github.com/oblador/react-native-vector-icons
 
 ## 8.react-query
 https://react-query.tanstack.com/
+https://www.youtube.com/watch?v=x1rQ61otgtU
 
 ## option.fast-lane
 ## option.typeScript
