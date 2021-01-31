@@ -37,6 +37,8 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>CodePushDeploymentKey</key>
+	<string>k5MxALulGksMt_EQqSREKAUyLRaemgC60SYTu</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>UILaunchStoryboardName</key>
