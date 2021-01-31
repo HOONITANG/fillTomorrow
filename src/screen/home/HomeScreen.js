@@ -22,6 +22,8 @@ export default function HomeContainer() {
                 </Block>
 
                 <TotalCard/>
+                <Text> 현재 위치 ..</Text>
+                <Text> O-O-X</Text>
                 {/* <Text h3>힘내.. 나는 못받았다구..</Text> */}
             </Block>
             
