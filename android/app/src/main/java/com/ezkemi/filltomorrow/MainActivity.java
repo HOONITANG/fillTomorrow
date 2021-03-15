@@ -1,4 +1,4 @@
-package com.ez_start_react_native;
+package com.ezkemi.filltomorrow;
 
 import com.facebook.react.ReactActivity;
 

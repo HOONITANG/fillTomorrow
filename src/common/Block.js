@@ -1,3 +1,14 @@
+
+/**
+ * Usage:
+ *  Shadow
+ * -   
+<Block card width={100} height ={100} shadow white >
+
+</Block> 
+ */
+
+
 import React from "react";
 import {
   Animated,
@@ -25,7 +36,9 @@ const Block = (props) => {
     bottom = false,
     card = false,
     shadow = null,
-    elevation = 3,
+    shadow2 = null,
+    shadow3 = null,
+    shadow4 = null,
     // colors
     color = null,
     primary = false,
@@ -108,13 +121,10 @@ const Block = (props) => {
     marginSpacing,
     paddingSpacing,
     wrap && styles.wrap,
-    shadow && {
-      elevation,
-      shadowColor: COLORS.black,
-      shadowOffset: { width: 0, height: elevation - 1 },
-      shadowOpacity: 0.2,
-      shadowRadius: elevation
-    },
+    shadow && { shadowColor: "#000", shadowOffset: { width: 0, height: 2,}, shadowOpacity: 0.23, shadowRadius: 2.62, elevation: 4 },
+    shadow2 && { shadowColor: "#000", shadowOffset: { width: 0, height: 3,}, shadowOpacity: 0.27, shadowRadius: 4.65, elevation: 6 },
+    shadow3 && { shadowColor: "#000", shadowOffset: { width: 0, height: 4,}, shadowOpacity: 0.30, shadowRadius: 4.65, elevation: 8 },
+    shadow4 && { shadowColor: "#000", shadowOffset: { width: 0, height: 5,}, shadowOpacity: 0.34, shadowRadius: 6.27, elevation: 10 },
     space && { justifyContent: `space-${space}` },
     card && { borderRadius: SIZES.radius },
     radius && { borderRadius: radius },
@@ -128,7 +138,6 @@ const Block = (props) => {
     error && { backgroundColor: COLORS.error },
     warning && { backgroundColor: COLORS.warning },
     success && { backgroundColor: COLORS.success },
-    info && { backgroundColor: COLORS.info },
     color && { backgroundColor: color }, // custom backgroundColor
     row && { flex: 0 },
     width && { width },

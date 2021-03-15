@@ -8,7 +8,7 @@ let nextTodoId = 0;
 export const updateUser = (user_id) => {
     return {
         type: UPDATE_USER,
-        payload: user_id,
+        payload: { user_id },
     }
 }
 

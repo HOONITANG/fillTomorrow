@@ -6,13 +6,22 @@ import { mergeTheme, getMargins, getPaddings } from "./helpers";
 /**
  * Usage:
  * fontSize predefined by theme.js
- * - <Text h1>fontSize of 34 from FONTS.h1</Text>
- * - <Text h2>fontSize of 24 from FONTS.h2</Text>
- * - <Text h3>fontSize of 20 from FONTS.h3</Text>
- * - <Text title>fontSize of 18 from FONTS.title</Text>
- * - <Text subtitle>fontSize of 14 from FONTS.subtitle</Text>
- * - <Text description>fontSize of 12 from FONTS.description</Text>
- * - <Text small>fontSize of 10 from FONTS.small</Text>
+ * -    
+<Text displayHeavy primary> Hi</Text>
+<Text displayLight  > Hi</Text>
+<Text headLineHeavy  > Hi</Text>
+<Text headLineLight  > Hi</Text>
+<Text titleHeavy  > Hi</Text>
+<Text titleLight  > Hi</Text>
+<Text subHeaderHeavy  > Hi</Text>
+<Text subHeaderLight  > Hi</Text>
+<Text bodyHeavy  > Hi</Text>
+<Text bodyLight  > Hi</Text>
+<Text> 이 외에는 너무 작다.</Text>
+<Text captionHeavy  > Hi</Text>
+<Text captionLight  > Hi</Text>
+<Text smallHeavy  > Hi</Text>
+<Text smallLight  > Hi</Text>
  * fontSize defined by user
  * - <Text size={20}>fontSize of 20</Text>
  *
@@ -86,13 +95,20 @@ const normalize = (size) => {
 const Typography = (props) => {
   const {
     // fonts & sizes
-    h1,
-    h2,
-    h3,
-    title,
-    subtitle,
-    caption,
-    small,
+    displayHeavy,
+    displayLight,
+    headLineHeavy,
+    headLineLight,
+    titleHeavy,
+    titleLight,
+    subHeaderHeavy,
+    subHeaderLight,
+    bodyHeavy,
+    bodyLight,
+    captionHeavy,
+    captionLight,
+    smallHeavy,
+    smallLight,
     size,
     // styling
     transform,
@@ -167,27 +183,33 @@ const Typography = (props) => {
     {
       fontWeight: WEIGHTS.regular,
       fontSize: SIZES.font,
-      color: COLORS.font
+      color: COLORS.font,
     },
-    h1 && FONTS.h1,
-    h2 && FONTS.h2,
-    h3 && FONTS.h3,
-    title && FONTS.title,
-    subtitle && FONTS.subtitle,
-    caption && FONTS.caption,
-    small && FONTS.small,
+
+    // font 
+    displayHeavy && FONTS.displayHeavy,
+    displayLight && FONTS.displayLight,
+    headLineHeavy && FONTS.headLineHeavy,
+    headLineLight && FONTS.headLineLight,
+    titleHeavy && FONTS.titleHeavy,
+    titleLight && FONTS.titleLight,
+    subHeaderHeavy && FONTS.subHeaderHeavy,
+    subHeaderLight && FONTS.subHeaderLight,
+    bodyHeavy && FONTS.bodyHeavy,
+    bodyLight && FONTS.bodyLight,
+    captionHeavy && FONTS.captionHeavy,
+    captionLight && FONTS.captionLight,
+    smallHeavy && FONTS.smallHeavy,
+    smallLight && FONTS.smallLight,
     size && { fontSize: size },
+    weight && { fontWeight: weight },
+    // margin
     marginSpacing,
     paddingSpacing,
     transform && { textTransform: transform },
     height && { lineHeight: height },
     spacing && { letterSpacing: spacing },
-    weight && { fontWeight: weight },
-    regular && { fontWeight: WEIGHTS.regular },
-    bold && { fontWeight: WEIGHTS.bold },
-    semibold && { fontWeight: WEIGHTS.semibold },
-    medium && { fontWeight: WEIGHTS.medium },
-    light && { fontWeight: WEIGHTS.light },
+    // align
     center && styles.center,
     right && styles.right,
     // color shortcuts
@@ -200,7 +222,6 @@ const Typography = (props) => {
     error && { color: COLORS.error },
     warning && { color: COLORS.warning },
     success && { color: COLORS.success },
-    info && { color: COLORS.info },
     color && { color },
     style // rewrite predefined styles
   ]);
@@ -222,13 +243,20 @@ const Typography = (props) => {
 
 Typography.defaultProps = {
   // fonts & sizes
-  h1: false,
-  h2: false,
-  h3: false,
-  title: false,
-  subtitle: false,
-  caption: false,
-  small: false,
+  displayHeavy: false,
+  displayLight: false,
+  headLineHeavy: false,
+  headLineLight: false,
+  titleHeavy: false,
+  titleLight: false,
+  subHeaderHeavy: false,
+  subHeaderLight: false,
+  bodyHeavy: false,
+  bodyLight: false,
+  captionHeavy: false,
+  captionLight: false,
+  smallHeavy: false,
+  smallLight: false,
   size: null,
   margin: null,
   padding: null,

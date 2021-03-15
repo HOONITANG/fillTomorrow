@@ -10,20 +10,20 @@ const Stack = createStackNavigator();
 const RootNavigator = () => {
     return (
         <NavigationContainer>
-        <Stack.Navigator
-            mode="modal"
-            headerMode="none"
-            screenOptions={{
-              cardStyle: { backgroundColor: 'transparent' },
-              cardOverlayEnabled: false,
-            }}
-        >
-            <Stack.Screen
-                name="Root"
-                component={StackNavigator}
-            />
-        </Stack.Navigator>
-      </NavigationContainer>
+            <Stack.Navigator
+                mode="modal"
+                headerMode="none"
+                screenOptions={{
+                cardStyle: { backgroundColor: 'transparent' },
+                cardOverlayEnabled: false,
+                }}
+            >
+                <Stack.Screen
+                    name="Root"
+                    component={StackNavigator}
+                />
+            </Stack.Navigator>
+        </NavigationContainer>
     )
 }
 

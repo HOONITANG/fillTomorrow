@@ -32,6 +32,7 @@ import SimpleLineIcon from 'react-native-vector-icons/SimpleLineIcons';
 import FeatherIcon from 'react-native-vector-icons/Feather';
 import AntIcon from 'react-native-vector-icons/AntDesign';
 import FontistoIcon from 'react-native-vector-icons/Fontisto';
+import { moderateScale } from 'react-native-size-matters';
 
 
 export const getSpacings = (value, defaultValue = 0) => {
@@ -174,41 +175,6 @@ export const getSpacings = (value, defaultValue = 0) => {
     return styles;
   };
   
-  /**
-   * Merge 2 theme with a default theme and extra theme
-   * to rewrite the default values with new values
-   * using ES6 spread operator
-   * Theme accepted data structure format:
-   * const theme1 = {
-   *   COLORS: {
-   *     primary: "red",
-   *     secondary: "green",
-   *     // see theme.js
-   *   },
-   *   SIZES: {
-   *     // see theme.js
-   *   },
-   *   FONTS: {
-   *     // see theme.js
-   *   },
-   *   WEIGHTS: {
-   *     // see theme.js
-   *   }
-   * }
-   *
-   * const theme2 = {
-   *   COLORS: {
-   *     primary: "blue",
-   *   }
-   * }
-   *
-   * Usage
-   * const appTheme = mergeTheme(theme1, theme2);
-   * const { COLORS } = appTheme;
-   * COLORS.primary will return value "blue"
-   * COLORS.secondary will return value "green"
-   */
-  
   export const mergeTheme = (theme, extra) => {
     const { COLORS, SIZES, FONTS, WEIGHTS, ...REST } = extra;
     return {
@@ -255,3 +221,8 @@ export const getSpacings = (value, defaultValue = 0) => {
     }
   };
 
+
+ 
+export function normalize(number, factor = 0.25) {
+  return moderateScale(number, factor);
+}
