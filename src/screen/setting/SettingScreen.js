@@ -6,30 +6,13 @@ import { COLORS, FONTS } from '../../common/theme';
 import lib from '../../lib'
 import { addName, addDate, addType } from '../../state/input/inputActions'
 import CustomInput from '../common/components/CustomInput';
-import { CommonActions } from '@react-navigation/native';
-import { NAVIGATION_HOME, NAVIGATION_INIT, NAVIGATION_SETTING, NAVIGATION_INPUT, NAVIGATION_INPUT2, NAVIGATION_INPUT3, } from '../../navigation/routes';
-
-// import { Header, DayCard, PayInfo } from './components';
 
 const { dateSplit, dateDiff } = lib.date;
 
 function SettingContainer({ navigation, input_name, input_type, input_date, addName, addDate, addType }) { 
-    //navigation.navigate(NAVIGATION_SETTING)
-    const navigationToSetting = () => {
-        //navigation.navigate(NAVIGATION_SETTING)
-        navigation.dispatch(
-            CommonActions.reset({
-            index: 1,
-            routes: [
-                { name: NAVIGATION_HOME },
-                { name: NAVIGATION_SETTING,},
-            ],
-            })
-        );
-    }
 
     const handleNameInput = (value) => { 
-        navigationToSetting();
+        //navigationToSetting();
         addName(value);
     }
 
@@ -39,14 +22,12 @@ function SettingContainer({ navigation, input_name, input_type, input_date, addN
         } 
         else {
             addDate(value.format("yyyy/MM/dd"));
-            navigationToSetting();
         }
         
     }
 
     const handleTypeInput = (value) => { 
         addType(value)
-        navigationToSetting();
     }
 
     renderDatePickerInput = () => {

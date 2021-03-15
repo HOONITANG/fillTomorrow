@@ -20,7 +20,7 @@ function CancellPay ({ input_date, input_type}) {
 
     useEffect(() => {
         initSetting();
-    },[])
+    },[input_date, input_type])
 
     const initSetting = () => {
         const date = dateSplit(input_date, '/');
@@ -256,17 +256,18 @@ function CancellPay ({ input_date, input_type}) {
         return (
             <>
                 <Text captionHeavy color={COLORS.color_gray_700}> {title} </Text>
-                <CustomInput 
-                    type={'pick'}
-                    items={[
-                        { label: '2년 계약', value: '2', key: '2', inputLabel: '2년 계약' },
-                        { label: '3년 계약', value: '3', key: '3', inputLabel: '3년 계약' },
-                    ]}
-                    onChangeText={handleSelectInput}
-                    text={cancellType}
-                    style={styles}
-                    pickerSelectStyles={pickerSelectStyles}
-                />
+                <Block row space='between'>
+                    <CustomInput 
+                        type={'pick'}
+                        items={[
+                            { label: '2년 계약', value: '2', key: '2', inputLabel: '2년 계약' },
+                            { label: '3년 계약', value: '3', key: '3', inputLabel: '3년 계약' },
+                        ]}
+                        onChangeText={handleSelectInput}
+                        text={cancellType}
+                        pickerSelectStyles={pickerSelectStyles}
+                    />
+                </Block>
             </>
         )
     }
@@ -323,7 +324,7 @@ const pickerSelectStyles = StyleSheet.create({
         borderWidth: 1, 
         borderRadius: 12,
         padding: 10,
-        color: COLORS.black
+        color: COLORS.black,
     },
     inputAndroid: {
         ...FONTS.subHeaderHeavy,

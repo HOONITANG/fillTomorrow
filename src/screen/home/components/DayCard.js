@@ -14,7 +14,7 @@ function DayCard ({ input_date, input_type}) {
 
     useEffect(() => {
         initSetting();
-    },[])
+    },[input_date, input_type])
 
     const initSetting = () => {
         const date = dateSplit(input_date, '/');
