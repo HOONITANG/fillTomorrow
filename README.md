@@ -85,7 +85,7 @@ RootApp.js
 
 ### SettingScreen **Page**
 
-![settingScreen](https://user-images.githubusercontent.com/45157159/145537586-b599c7e6-2559-4581-b14e-a9eb85ed8e06.png)
+![SettingScreenGroup](https://user-images.githubusercontent.com/45157159/145538352-e0593afa-7713-4e0f-9439-dc8b3cc2ea5a.png)
 
 - 기본값을 수정할 수 있는 설정 페이지 입니다.
 
